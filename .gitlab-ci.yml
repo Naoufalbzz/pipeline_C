@@ -1,0 +1,12 @@
+image: gcc:latest
+
+stages:
+  - compile
+
+compile_hello_world:
+  stage: compile
+  script:
+    - gcc helloworld.c -o helloworld
+  artifacts:
+    paths:
+      - helloworld
